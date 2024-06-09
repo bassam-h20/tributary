@@ -6,4 +6,6 @@ RUN pip install -r requirements.txt
 
 COPY ./entrypoint.py .
 
+COPY ./sensor_request.py .
+
 CMD exec gunicorn --bind 0.0.0.0:8000 entrypoint:app
